@@ -13,8 +13,8 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
       - name: Run tests
-        run: xcodebuild clean test
-          -skipMacroValidation
-          -sdk iphonesimulator
-          -scheme ${{ env.SCHEME_NAME }}
+        run: xcodebuild clean test \
+          -skipMacroValidation \
+          -sdk iphonesimulator \
+          -scheme ${{ env.SCHEME_NAME }} \
           -destination 'platform=iOS Simulator,name=iPhone 15 Pro'
